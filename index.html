@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google Cloud: Corporate vs. Developer-First Prototype</title>
+  <title>Google Cloud Product Page Evolution: Corporate vs. Developer-First</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,15 +21,15 @@
 <body class="bg-neutral-950 text-neutral-100 min-h-screen flex flex-col antialiased">
 
   <!-- Top Global Header & Control Bar -->
-  <header class="sticky top-0 z-50 bg-neutral-900/90 backdrop-blur-md border-b border-neutral-800 px-4 py-3 flex flex-wrap items-center justify-between gap-4">
+  <header class="sticky top-0 z-50 bg-neutral-900/95 backdrop-blur-md border-b border-neutral-800 px-4 py-3 flex flex-wrap items-center justify-between gap-4 shadow-lg">
     <div class="flex items-center gap-3">
       <div class="flex items-center gap-2">
         <span class="inline-flex items-center justify-center p-1.5 rounded-lg bg-blue-500/20 text-blue-400 font-bold text-sm">⚡</span>
-        <span class="font-bold text-sm sm:text-base text-white tracking-tight">GCP Product Page Evolution Demo</span>
+        <div>
+          <span class="font-bold text-sm sm:text-base text-white tracking-tight block leading-tight">Google Cloud: Developer-First Evolution</span>
+          <span class="text-[11px] text-neutral-400 hidden sm:inline">Executive & DevRel Review • 4 Core Methods of Dev Marketing</span>
+        </div>
       </div>
-      <span class="hidden md:inline-block text-xs text-neutral-400 border-l border-neutral-700 pl-3">
-        Internal DevRel & Marketing Review
-      </span>
     </div>
 
     <!-- Central Interactive Switchers -->
@@ -47,10 +47,10 @@
       <!-- Mode Selector -->
       <div class="flex bg-neutral-800 p-1 rounded-xl border border-neutral-700 text-xs font-semibold">
         <button id="btn-mode-split" onclick="switchMode('split')" class="px-3 py-1.5 rounded-lg bg-neutral-700 text-white transition-all">
-          Split View (Side-by-Side)
+          Split View
         </button>
         <button id="btn-mode-corporate" onclick="switchMode('corporate')" class="px-3 py-1.5 rounded-lg text-neutral-400 hover:text-white transition-all">
-          Current Corporate
+          Current Live Corporate
         </button>
         <button id="btn-mode-dev" onclick="switchMode('dev')" class="px-3 py-1.5 rounded-lg text-neutral-400 hover:text-white transition-all flex items-center gap-1">
           <span>✨ Dev-First (New)</span>
@@ -63,124 +63,149 @@
   <main class="flex-1 flex flex-col md:flex-row overflow-hidden relative" id="comparison-container">
 
     <!-- ========================================================== -->
-    <!-- LEFT PANEL: CURRENT CORPORATE PAGE                         -->
+    <!-- LEFT PANEL: CURRENT LIVE CORPORATE PAGE (VERBATIM)         -->
     <!-- ========================================================== -->
     <section id="panel-corporate" class="flex-1 corporate-bg text-neutral-800 border-r border-neutral-200 overflow-y-auto custom-scrollbar flex flex-col">
       <!-- Meta Tag Banner -->
-      <div class="bg-amber-50 border-b border-amber-200 px-6 py-2.5 text-xs text-amber-800 flex items-center justify-between font-medium">
-        <span>🏢 CURRENT CORPORATE WEBSITE (cloud.google.com)</span>
-        <span class="bg-amber-200/60 px-2 py-0.5 rounded text-[11px] font-mono">Audience: Procurement Committee</span>
+      <div class="bg-amber-50 border-b border-amber-200 px-6 py-2.5 text-xs text-amber-900 flex items-center justify-between font-medium">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+          <span class="font-bold">CURRENT LIVE PAGE (cloud.google.com)</span>
+        </div>
+        <span class="bg-amber-200/70 px-2 py-0.5 rounded text-[11px] font-mono text-amber-900">Procurement & Sales-Assisted Tone</span>
       </div>
 
-      <!-- Content: Corporate Cloud Run -->
-      <div id="corp-content-run" class="p-8 max-w-2xl mx-auto flex flex-col gap-8">
-        <!-- Hero -->
-        <div class="border-b border-neutral-200 pb-8">
-          <div class="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full mb-3">
-            Compute • Serverless Platform
-          </div>
-          <h1 class="text-3xl font-extrabold text-neutral-900 tracking-tight leading-tight">
-            Build and deploy scalable containerized apps on a fully managed serverless platform
+      <!-- Content: Live Cloud Run (Verbatim) -->
+      <div id="corp-content-run" class="p-6 sm:p-8 max-w-2xl mx-auto flex flex-col gap-6">
+        <!-- Gartner Banner (from live page) -->
+        <div class="p-3 bg-blue-50 border border-blue-200 rounded-lg text-xs text-blue-900 flex items-center justify-between">
+          <span>🏆 Google is a Leader in the 2026 Gartner® Magic Quadrant™ for Cloud-Native Application Platforms.</span>
+          <a href="#" class="underline font-semibold ml-2 whitespace-nowrap">Download report</a>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="border-b border-neutral-200 pb-6">
+          <div class="text-xs font-bold text-neutral-500 uppercase tracking-wider mb-2">Cloud Run</div>
+          <h1 class="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight leading-tight">
+            Build apps or websites quickly on a fully managed platform
           </h1>
-          <p class="text-base text-neutral-600 mt-4 leading-relaxed">
-            Deliver faster with seamless automated scaling, robust enterprise-grade security, and flexible language runtimes including Go, Python, Java, Node.js, .NET, and Ruby. Empower developers to write code without worrying about infrastructure management.
+          <p class="text-sm text-neutral-600 mt-3 leading-relaxed">
+            Run frontend and backend services, batch jobs, host LLMs, and queue processing workloads without the need to manage infrastructure. Get two million requests free per month.
           </p>
-          <div class="mt-6 flex flex-wrap items-center gap-3">
-            <button class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg shadow-sm transition">
-              Start free trial
+          <div class="mt-5 flex flex-wrap items-center gap-3">
+            <button class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-md shadow-sm transition">
+              Start free
             </button>
-            <button class="px-5 py-2.5 bg-white border border-neutral-300 hover:bg-neutral-50 text-neutral-700 text-sm font-semibold rounded-lg transition">
+            <button class="px-5 py-2.5 bg-white border border-neutral-300 hover:bg-neutral-50 text-neutral-700 text-xs font-bold rounded-md transition">
+              Contact sales
+            </button>
+            <button class="px-5 py-2.5 bg-white border border-neutral-300 hover:bg-neutral-50 text-neutral-700 text-xs font-bold rounded-md transition">
+              Request a quote
+            </button>
+          </div>
+        </div>
+
+        <!-- Value Propositions from live site -->
+        <div class="space-y-4 text-xs text-neutral-700">
+          <div class="p-4 border border-neutral-200 rounded-xl bg-neutral-50">
+            <h3 class="font-bold text-neutral-900 mb-1">The flexibility of containers with the simplicity of serverless</h3>
+            <p class="text-neutral-600">You can write code using your favorite language, framework, and libraries, package it up as a container, run "gcloud run deploy", and your app will be live with a secure URL, SSL certificate setup, and auto-scaling.</p>
+          </div>
+
+          <div class="p-4 border border-neutral-200 rounded-xl bg-neutral-50">
+            <h3 class="font-bold text-neutral-900 mb-1">On-demand access to NVIDIA L4 GPUs for running AI inference workloads</h3>
+            <p class="text-neutral-600">GPU instances start in 5 seconds and scale to zero when not in use, making Cloud Run an economical choice for running open-source LLMs like Gemma, Llama, and Mistral.</p>
+          </div>
+
+          <div class="p-4 border border-neutral-200 rounded-xl bg-neutral-50">
+            <h3 class="font-bold text-neutral-900 mb-1">Only pay when your code is running</h3>
+            <p class="text-neutral-600">Cloud Run scales to zero when you are not using it. Whether you own event-driven, long running services, or deploy containerized jobs to process data, Cloud Run automatically manages resource allocation.</p>
+          </div>
+        </div>
+
+        <!-- Live Page Pricing Notice -->
+        <div class="p-4 bg-neutral-100 rounded-xl border border-neutral-200 text-xs text-neutral-600">
+          <span class="font-bold text-neutral-800 block mb-1">Pricing & Discounts:</span>
+          Per-second resource billing based on vCPU and GiB allocated. Visit Google Cloud Pricing Calculator to customize your enterprise discount profile.
+        </div>
+      </div>
+
+      <!-- Content: Live Cloud Spanner (Verbatim) -->
+      <div id="corp-content-spanner" class="p-6 sm:p-8 max-w-2xl mx-auto flex flex-col gap-6 hidden">
+        <!-- Webinar Banner (from live page) -->
+        <div class="p-3 bg-indigo-50 border border-indigo-200 rounded-lg text-xs text-indigo-900 flex items-center justify-between">
+          <span>🧠 Deliver deep context for agentic AI with Spanner multi-model capabilities.</span>
+          <a href="#" class="underline font-semibold ml-2 whitespace-nowrap">Register for webinar</a>
+        </div>
+
+        <!-- Hero Section -->
+        <div class="border-b border-neutral-200 pb-6">
+          <div class="text-xs font-bold text-neutral-500 uppercase tracking-wider mb-2">Spanner</div>
+          <h1 class="text-2xl sm:text-3xl font-extrabold text-neutral-900 tracking-tight leading-tight">
+            Always-on database with virtually unlimited scale
+          </h1>
+          <p class="text-sm text-neutral-600 mt-3 leading-relaxed">
+            Build intelligent, mission-critical apps on a single database that unifies relational, graph, key-value, and search. Run anywhere with Spanner Omni. Get started with a 90 day free trial instance.
+          </p>
+          <div class="mt-5 flex flex-wrap items-center gap-3">
+            <button class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-md shadow-sm transition">
+              Start free
+            </button>
+            <button class="px-5 py-2.5 bg-white border border-neutral-300 hover:bg-neutral-50 text-neutral-700 text-xs font-bold rounded-md transition">
               Contact sales
             </button>
           </div>
         </div>
 
-        <!-- Fluff Features -->
-        <div class="space-y-6">
-          <h2 class="text-xl font-bold text-neutral-900">Key Features & Value Propositions</h2>
-          <div class="grid grid-cols-1 gap-4 text-sm">
-            <div class="p-4 border border-neutral-200 rounded-xl bg-neutral-50/50">
-              <h3 class="font-bold text-neutral-900 mb-1">Seamless Autoscaling</h3>
-              <p class="text-neutral-600">Scale rapidly from zero to thousands of instances in response to inbound traffic requests without operational intervention.</p>
-            </div>
-            <div class="p-4 border border-neutral-200 rounded-xl bg-neutral-50/50">
-              <h3 class="font-bold text-neutral-900 mb-1">Enterprise-Grade Security</h3>
-              <p class="text-neutral-600">Built on Google's world-class defense-in-depth security infrastructure, featuring automated SSL/TLS certificates and VPC integration.</p>
-            </div>
-            <div class="p-4 border border-neutral-200 rounded-xl bg-neutral-50/50">
-              <h3 class="font-bold text-neutral-900 mb-1">Pay-as-You-Go Economics</h3>
-              <p class="text-neutral-600">Granular per-second billing ensures cost optimization so you only pay for active resource usage across your enterprise workloads.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Pricing Callout -->
-        <div class="p-5 border border-blue-100 bg-blue-50/50 rounded-xl text-xs text-neutral-600">
-          <span class="font-bold text-blue-900 block mb-1">Looking for pricing?</span>
-          Visit our detailed cloud pricing calculator to configure custom instance shapes, memory allocations, and enterprise discount programs.
-        </div>
-      </div>
-
-      <!-- Content: Corporate Cloud Spanner -->
-      <div id="corp-content-spanner" class="p-8 max-w-2xl mx-auto flex flex-col gap-8 hidden">
-        <div class="border-b border-neutral-200 pb-8">
-          <div class="inline-block px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-semibold rounded-full mb-3">
-            Databases • Relational Database Service
-          </div>
-          <h1 class="text-3xl font-extrabold text-neutral-900 tracking-tight leading-tight">
-            The only enterprise-grade, globally-distributed, strongly consistent database built for the cloud
-          </h1>
-          <p class="text-base text-neutral-600 mt-4 leading-relaxed">
-            Eliminate traditional database trade-offs with unlimited horizontal scale, zero downtime maintenance, and up to 99.999% availability. Unify relational database semantics with non-relational horizontal scalability across multi-regional architectures.
-          </p>
-          <div class="mt-6 flex flex-wrap items-center gap-3">
-            <button class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-lg shadow-sm transition">
-              Contact an expert
-            </button>
-            <button class="px-5 py-2.5 bg-white border border-neutral-300 hover:bg-neutral-50 text-neutral-700 text-sm font-semibold rounded-lg transition">
-              Request a demo
-            </button>
-          </div>
-        </div>
-
-        <div class="space-y-4 text-sm text-neutral-600">
+        <!-- Value Props from live page -->
+        <div class="space-y-4 text-xs text-neutral-700">
           <div class="p-4 border border-neutral-200 rounded-xl bg-neutral-50">
-            <h3 class="font-bold text-neutral-900 mb-1">Global Scale Without Sharding</h3>
-            <p>Designed for mission-critical relational transactions across continents with synchronized atomic clocks.</p>
+            <h3 class="font-bold text-neutral-900 mb-1">Start small and scale without limits or re-architecture</h3>
+            <p class="text-neutral-600">Start with low-cost configurations and scale compute and storage independently with zero downtime maintenance and up to 99.999% availability SLA.</p>
           </div>
+
           <div class="p-4 border border-neutral-200 rounded-xl bg-neutral-50">
-            <h3 class="font-bold text-neutral-900 mb-1">99.999% SLA</h3>
-            <p>Industry-leading availability with automated failover and zero-downtime schema migrations.</p>
+            <h3 class="font-bold text-neutral-900 mb-1">Built-in graph processing, full-text search, and vector search</h3>
+            <p class="text-neutral-600">Spanner's multi-model capabilities empower you to build intelligent, AI-enabled applications on top of your operational relational data without moving data across multiple specialized databases.</p>
+          </div>
+
+          <div class="p-4 border border-neutral-200 rounded-xl bg-neutral-50">
+            <h3 class="font-bold text-neutral-900 mb-1">Seamlessly integrate with Gemini Enterprise Agent Platform</h3>
+            <p class="text-neutral-600">Maximize AI developer productivity to build intelligent, generative applications grounded in your operational database.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ========================================================== -->
-    <!-- RIGHT PANEL: NEW DEVELOPER-FIRST PAGE                      -->
+    <!-- RIGHT PANEL: DEVELOPER-FIRST REDESIGN (THE 4 METHODS)      -->
     <!-- ========================================================== -->
     <section id="panel-dev" class="flex-1 dev-bg text-neutral-200 overflow-y-auto custom-scrollbar flex flex-col">
       <!-- Meta Tag Banner -->
       <div class="bg-emerald-950/80 border-b border-emerald-800/80 px-6 py-2.5 text-xs text-emerald-400 flex items-center justify-between font-medium">
-        <span>⚡ DEVELOPER-FIRST REDESIGN (The 4 Methods)</span>
-        <span class="bg-emerald-900/60 px-2 py-0.5 rounded text-[11px] font-mono">Audience: Engineer in Terminal / AI Agent</span>
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span class="font-bold">DEVELOPER-FIRST REDESIGN</span>
+        </div>
+        <span class="bg-emerald-900/60 px-2 py-0.5 rounded text-[11px] font-mono text-emerald-300">Target: Engineer in Terminal + AI Agent</span>
       </div>
 
       <!-- Content: Dev-First Cloud Run -->
-      <div id="dev-content-run" class="p-6 sm:p-8 max-w-2xl mx-auto flex flex-col gap-8">
+      <div id="dev-content-run" class="p-6 sm:p-8 max-w-2xl mx-auto flex flex-col gap-6">
+        
         <!-- Hero: 1-Command Runnable -->
-        <div class="border-b border-neutral-800 pb-7">
+        <div class="border-b border-neutral-800 pb-6">
           <div class="flex items-center gap-2 mb-2">
             <span class="text-blue-400 font-bold text-xs font-mono uppercase tracking-wider">Cloud Run ⚡</span>
             <span class="text-neutral-500 text-xs">•</span>
-            <a href="#llmstxt" class="text-xs text-neutral-400 hover:text-emerald-400 font-mono underline transition">curl cloud.google.com/run/llms.txt</a>
+            <span class="text-xs text-emerald-400 font-mono">Real Concurrency • Scale to Zero</span>
           </div>
           <h1 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-snug">
             Any container. Real concurrency. Scale to zero. No Kubernetes tax.
           </h1>
 
           <!-- Terminal Block -->
-          <div class="mt-5 bg-black rounded-xl border border-neutral-800 p-4 font-mono text-xs sm:text-sm text-neutral-300 shadow-xl relative group">
+          <div class="mt-4 bg-black rounded-xl border border-neutral-800 p-4 font-mono text-xs text-neutral-300 shadow-xl">
             <div class="flex items-center justify-between mb-2 text-neutral-500 text-xs border-b border-neutral-900 pb-2">
               <div class="flex items-center gap-1.5">
                 <div class="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
@@ -188,47 +213,40 @@
                 <div class="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></div>
                 <span class="ml-2">bash</span>
               </div>
-              <span class="text-[11px] text-emerald-400/80">~45s to live HTTPS</span>
+              <span class="text-[11px] text-emerald-400">~45s to live HTTPS</span>
             </div>
             <div class="space-y-1">
-              <p class="text-neutral-500"># Deploy current directory (Dockerfile auto-detected or buildpack generated)</p>
+              <p class="text-neutral-500"># 1 command. No YAML. No cluster. Live HTTPS.</p>
               <p><span class="text-emerald-400 font-bold">$</span> gcloud run deploy my-api --source . --allow-unauthenticated</p>
-              <p class="text-neutral-400">✔ Building container image...</p>
-              <p class="text-neutral-400">✔ Routing live traffic (100%)...</p>
+              <p class="text-neutral-400">✔ Building container... Routing traffic (100%)...</p>
               <p class="text-blue-400 underline">https://my-api-738914-uc.a.run.app</p>
             </div>
           </div>
         </div>
 
-        <!-- Method 1: The Anti-Pitch / Flaw-First Filter -->
-        <div class="p-5 rounded-2xl bg-red-950/20 border border-red-900/40">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="text-red-400 font-bold text-sm">🚫 When NOT to use Cloud Run</span>
-            <span class="text-[11px] px-2 py-0.5 rounded bg-red-900/30 text-red-300 font-mono">The Anti-Pitch</span>
+        <!-- METHOD 1: The Flaw-First Anti-Pitch -->
+        <div class="p-5 rounded-2xl bg-red-950/20 border border-red-900/50">
+          <div class="flex items-center justify-between mb-2.5">
+            <span class="text-red-400 font-bold text-xs uppercase tracking-wider flex items-center gap-1.5">
+              <span>🚫 METHOD 1: The Flaw-First Anti-Pitch</span>
+            </span>
+            <span class="text-[10px] bg-red-900/40 text-red-300 px-2 py-0.5 rounded font-mono font-bold">Disqualifiers</span>
           </div>
-          <div class="space-y-3 text-xs sm:text-sm text-neutral-300 leading-relaxed">
-            <div class="flex items-start gap-2">
-              <span class="text-red-400 font-bold">1.</span>
-              <p><strong class="text-white">Persistent local disk state:</strong> Containers are ephemeral. When an instance terminates, disk vanishes. <em class="text-neutral-400">Use Cloud SQL or GCS volumes.</em></p>
-            </div>
-            <div class="flex items-start gap-2">
-              <span class="text-red-400 font-bold">2.</span>
-              <p><strong class="text-white">Flat 24/7 100% CPU loads:</strong> If your servers never sleep, Compute Engine VMs with Committed Use Discounts are <strong class="text-emerald-400">~3x cheaper</strong> per core-hour.</p>
-            </div>
-            <div class="flex items-start gap-2">
-              <span class="text-red-400 font-bold">3.</span>
-              <p><strong class="text-white">20,000 idle WebSockets:</strong> WebSockets are supported (up to 60 min), but paying per container-second for mostly idle sockets gets pricey. <em class="text-neutral-400">Use Compute Engine or Pub/Sub push.</em></p>
-            </div>
+          <h4 class="text-sm font-bold text-white mb-2">When NOT to use Cloud Run (Read this first):</h4>
+          <div class="space-y-2.5 text-xs text-neutral-300 leading-relaxed">
+            <p><strong class="text-white">1. Persistent local disk:</strong> Instances are ephemeral tmpfs. When instances scale down or crash, disk vanishes. <em class="text-neutral-400">Use Cloud SQL or GCS volumes.</em></p>
+            <p><strong class="text-white">2. 24/7 flat 100% CPU loads:</strong> If your servers never sleep, Compute Engine VMs with Committed Use Discounts are <strong class="text-emerald-400">~3x cheaper</strong> per core-hour.</p>
+            <p><strong class="text-white">3. Massive idle WebSockets:</strong> WebSockets are supported, but paying per active container-second for 20,000 mostly-idle open sockets gets expensive. <em class="text-neutral-400">Use Compute Engine or Pub/Sub.</em></p>
           </div>
         </div>
 
-        <!-- Method 3: Concurrency vs Lambda (The Differentiator) -->
+        <!-- The Concurrency Advantage (Why Lambda users switch) -->
         <div class="p-5 rounded-2xl bg-neutral-900 border border-neutral-800">
-          <h3 class="text-sm font-bold text-white mb-2 flex items-center justify-between">
-            <span>⚡ The Concurrency Advantage (Why Lambda users switch)</span>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-white uppercase tracking-wider">⚡ The Concurrency Advantage</span>
             <span class="text-[10px] bg-blue-900/40 text-blue-300 px-2 py-0.5 rounded font-mono">1 Container = 1000 Req</span>
-          </h3>
-          <p class="text-xs text-neutral-400 mb-3">AWS Lambda provisions 80 separate execution environments for 80 simultaneous requests. Cloud Run multiplexes them into 1 container with shared database connection pools.</p>
+          </div>
+          <p class="text-xs text-neutral-400 mb-3">On AWS Lambda, 80 simultaneous requests trigger 80 cold starts and 80 DB connections. On Cloud Run, 1 container handles all 80 with 1 connection pool.</p>
           <div class="grid grid-cols-2 gap-3 text-[11px] font-mono">
             <div class="p-3 rounded-lg bg-black border border-neutral-800">
               <span class="text-neutral-500 block mb-1">AWS Lambda</span>
@@ -245,12 +263,14 @@
           </div>
         </div>
 
-        <!-- Method 2: Transparent Receipt Calculator -->
+        <!-- METHOD 2: Zero-Fluff Receipts & Live Billing Math -->
         <div class="p-5 rounded-2xl bg-neutral-900 border border-neutral-800">
-          <h3 class="text-sm font-bold text-white mb-1">💰 The Transparent Receipt</h3>
-          <p class="text-xs text-neutral-400 mb-4">No hidden minimums. Free tier: 2M requests, 180k vCPU-s, 360k GiB-s every month forever.</p>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">💰 METHOD 2: Zero-Fluff Receipts</span>
+            <span class="text-[10px] bg-emerald-900/40 text-emerald-300 px-2 py-0.5 rounded font-mono font-bold">Real Arithmetic</span>
+          </div>
+          <p class="text-xs text-neutral-400 mb-3">No contact-sales forms. Free tier every month: 2M requests, 180k vCPU-seconds, 360k GiB-seconds.</p>
           
-          <!-- Live Mini Calc -->
           <div class="space-y-3 text-xs bg-black p-4 rounded-xl border border-neutral-800">
             <div class="flex justify-between items-center">
               <span class="text-neutral-300">Daily Requests:</span>
@@ -258,18 +278,48 @@
             </div>
             <input type="range" min="10000" max="1000000" step="10000" value="100000" id="calc-slider"
               oninput="updateRunCalc(this.value)" class="w-full h-1 bg-neutral-800 rounded accent-emerald-500 cursor-pointer">
-            <div class="border-t border-neutral-800 pt-2.5 flex justify-between items-center">
-              <span class="text-neutral-400">Estimated Monthly Bill:</span>
+            <div class="border-t border-neutral-800 pt-2 flex justify-between items-center">
+              <span class="text-neutral-400">Monthly Bill (80ms avg, 1 vCPU):</span>
               <span id="calc-bill-result" class="font-mono text-sm text-emerald-400 font-bold">$1.84 / mo</span>
             </div>
           </div>
         </div>
+
+        <!-- METHOD 3: Dual-Audience / AEO (llms.txt) -->
+        <div class="p-5 rounded-2xl bg-neutral-900 border border-neutral-800">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider">🤖 METHOD 3: Dual-Audience & AEO (llms.txt)</span>
+            <span class="text-[10px] bg-indigo-900/40 text-indigo-300 px-2 py-0.5 rounded font-mono font-bold">Machine-Readable</span>
+          </div>
+          <p class="text-xs text-neutral-400 mb-3">For coding agents (Cursor, Claude Code, Gemini). Clean markdown spec without 45-page JS documentation traps:</p>
+          <div class="bg-black p-3 rounded-xl border border-neutral-800 font-mono text-xs text-neutral-300">
+            <p class="text-neutral-500"># Fetch instant CLI flags, container contracts, and IAM specs in 200ms:</p>
+            <p class="text-indigo-400 font-bold">$ curl -s https://cloud.google.com/run/llms.txt</p>
+            <p class="text-neutral-400 mt-1">&gt; Container contract: Listen on $PORT (0.0.0.0), stateless tmpfs, max 60m timeout.</p>
+          </div>
+        </div>
+
+        <!-- METHOD 4: Engineering-as-Marketing (Self-Auditing Micro-Tool) -->
+        <div class="p-5 rounded-2xl bg-neutral-900 border border-neutral-800">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">🛠️ METHOD 4: Engineering-as-Marketing</span>
+            <span class="text-[10px] bg-amber-900/40 text-amber-300 px-2 py-0.5 rounded font-mono font-bold">Unvarnished CLI</span>
+          </div>
+          <p class="text-xs text-neutral-400 mb-3">Run our open-source CLI evaluator. It will honestly tell you if Cloud Run is the wrong fit for your workload:</p>
+          <div class="bg-black p-3.5 rounded-xl border border-neutral-800 font-mono text-xs text-neutral-300">
+            <p class="text-emerald-400 font-bold">$ npx gcp-run-calc --rps 58 --latency 120 --cpu 2</p>
+            <p class="text-amber-400 mt-1">⚠️ FIT WARNING: Traffic is flat 24/7 (58 sustained RPS).</p>
+            <p class="text-neutral-400">Compute Engine e2-standard-4 (1yr CUD) is 3.2x cheaper ($194/mo vs $619/mo).</p>
+          </div>
+        </div>
+
       </div>
 
       <!-- Content: Dev-First Cloud Spanner -->
-      <div id="dev-content-spanner" class="p-6 sm:p-8 max-w-2xl mx-auto flex flex-col gap-8 hidden">
+      <div id="dev-content-spanner" class="p-6 sm:p-8 max-w-2xl mx-auto flex flex-col gap-6 hidden">
+        
         <!-- Hero: The PostgreSQL wire protocol + real floor -->
-        <div class="border-b border-neutral-800 pb-7">
+        <div class="border-b border-neutral-800 pb-6">
           <div class="flex items-center gap-2 mb-2">
             <span class="text-indigo-400 font-bold text-xs font-mono uppercase tracking-wider">Cloud Spanner ⚡</span>
             <span class="text-neutral-500 text-xs">•</span>
@@ -279,67 +329,106 @@
             PostgreSQL wire protocol. Strongly consistent across continents. No shards.
           </h1>
 
-          <div class="mt-5 bg-black rounded-xl border border-neutral-800 p-4 font-mono text-xs sm:text-sm text-neutral-300 shadow-xl">
+          <div class="mt-4 bg-black rounded-xl border border-neutral-800 p-4 font-mono text-xs text-neutral-300 shadow-xl">
             <div class="flex items-center justify-between mb-2 text-neutral-500 text-xs border-b border-neutral-900 pb-2">
-              <span>Connect via standard PostgreSQL client</span>
-              <span class="text-[11px] text-indigo-400">psql compatible</span>
+              <span>Connect via standard PostgreSQL client (psql, Prisma, Drizzle)</span>
+              <span class="text-[11px] text-indigo-400">Port 5432</span>
             </div>
             <p class="text-emerald-400 font-bold">$ psql "host=127.0.0.1 port=5432 dbname=production"</p>
             <p class="text-neutral-400">psql (16.2, server Cloud Spanner PostgreSQL 15.0)</p>
-            <p class="text-neutral-300">production=&gt; SELECT * FROM users WHERE active = true;</p>
+            <p class="text-neutral-300">production=&gt; SELECT * FROM orders WHERE status = 'confirmed';</p>
           </div>
         </div>
 
-        <!-- Method 1: Anti-Pitch Spanner -->
-        <div class="p-5 rounded-2xl bg-red-950/20 border border-red-900/40">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="text-red-400 font-bold text-sm">🚫 When NOT to use Spanner</span>
-            <span class="text-[11px] px-2 py-0.5 rounded bg-red-900/30 text-red-300 font-mono">The Honest Trade-off</span>
+        <!-- METHOD 1: Anti-Pitch Spanner -->
+        <div class="p-5 rounded-2xl bg-red-950/20 border border-red-900/50">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-red-400 font-bold text-xs uppercase tracking-wider">🚫 METHOD 1: The Flaw-First Anti-Pitch</span>
+            <span class="text-[10px] bg-red-900/40 text-red-300 px-2 py-0.5 rounded font-mono font-bold">Disqualifiers</span>
           </div>
-          <div class="space-y-3 text-xs sm:text-sm text-neutral-300 leading-relaxed">
-            <div class="flex items-start gap-2">
-              <span class="text-red-400 font-bold">1.</span>
-              <p><strong class="text-white">Under 500GB in a single region:</strong> Cloud SQL for PostgreSQL is much cheaper and supports all native extensions. <em class="text-neutral-400">Use Cloud SQL.</em></p>
-            </div>
-            <div class="flex items-start gap-2">
-              <span class="text-red-400 font-bold">2.</span>
-              <p><strong class="text-white">You rely on Postgres extensions:</strong> No PostGIS, no pg_vector, no custom C extensions. Spanner implements core SQL and wire protocol, not extension binaries.</p>
-            </div>
-            <div class="flex items-start gap-2">
-              <span class="text-red-400 font-bold">3.</span>
-              <p><strong class="text-white">Sub-millisecond single-row reads:</strong> Strong consensus has a physical floor. Expect ~5–8ms p50 reads, not the ~0.5ms of local RAM/Redis.</p>
-            </div>
+          <h4 class="text-sm font-bold text-white mb-2">When NOT to use Spanner:</h4>
+          <div class="space-y-2.5 text-xs text-neutral-300 leading-relaxed">
+            <p><strong class="text-white">1. Under 500GB in a single region:</strong> Cloud SQL for PostgreSQL is much cheaper and supports all native extensions. <em class="text-neutral-400">Use Cloud SQL.</em></p>
+            <p><strong class="text-white">2. You rely on Postgres extensions:</strong> No PostGIS, no pg_vector, no custom C extensions. Spanner implements core SQL and wire protocol, not extension binaries.</p>
+            <p><strong class="text-white">3. Sub-millisecond single-row reads:</strong> Strong consensus has a physical quorum floor. Expect ~5–8ms p50 reads, not the ~0.5ms of local RAM/Redis.</p>
           </div>
         </div>
 
-        <!-- Method 5: Migration Honesty & Lock-In -->
+        <!-- METHOD 2: Real Spanner Receipts -->
         <div class="p-5 rounded-2xl bg-neutral-900 border border-neutral-800">
-          <h3 class="text-sm font-bold text-white mb-2 flex items-center justify-between">
-            <span>🚪 How to Leave Spanner (Migration Honesty)</span>
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">💰 METHOD 2: Transparent Receipts</span>
+            <span class="text-[10px] bg-emerald-900/40 text-emerald-300 px-2 py-0.5 rounded font-mono font-bold">$65 Floor</span>
+          </div>
+          <p class="text-xs text-neutral-400 mb-3">The $650/month minimum you remember was retired. 100 Processing Units (1/10th node) is the new floor:</p>
+          <div class="grid grid-cols-2 gap-3 text-xs font-mono">
+            <div class="p-3 bg-black rounded-xl border border-neutral-800">
+              <span class="text-neutral-500 block">100 PU Dev Instance</span>
+              <span class="text-emerald-400 font-bold text-sm">~$65.00 / mo</span>
+              <span class="text-neutral-400 text-[11px] block mt-1">+ $0.30/GB storage</span>
+            </div>
+            <div class="p-3 bg-black border border-neutral-800 rounded-xl">
+              <span class="text-neutral-500 block">Cloud SQL HA (4 vCPU)</span>
+              <span class="text-red-400 font-bold text-sm">~$420.00 / mo</span>
+              <span class="text-neutral-400 text-[11px] block mt-1">Paying for idle standby</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- METHOD 3: AEO for Spanner -->
+        <div class="p-5 rounded-2xl bg-neutral-900 border border-neutral-800">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider">🤖 METHOD 3: Dual-Audience & AEO (llms.txt)</span>
+            <span class="text-[10px] bg-indigo-900/40 text-indigo-300 px-2 py-0.5 rounded font-mono font-bold">Machine-Readable</span>
+          </div>
+          <div class="bg-black p-3 rounded-xl border border-neutral-800 font-mono text-xs text-neutral-300">
+            <p class="text-indigo-400 font-bold">$ curl -s https://cloud.google.com/spanner/llms.txt</p>
+            <p class="text-neutral-400 mt-1">&gt; Primary keys: Avoid monotonically increasing timestamps (hotspots). Use UUIDv4 or bit-reversed sequences.</p>
+          </div>
+        </div>
+
+        <!-- METHOD 4: Engineering-as-Marketing (npx spanner-fit) -->
+        <div class="p-5 rounded-2xl bg-neutral-900 border border-neutral-800">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">🛠️ METHOD 4: Engineering-as-Marketing</span>
+            <span class="text-[10px] bg-amber-900/40 text-amber-300 px-2 py-0.5 rounded font-mono font-bold">Evaluator Tool</span>
+          </div>
+          <p class="text-xs text-neutral-400 mb-2">Test whether you actually need Spanner before writing any code:</p>
+          <div class="bg-black p-3.5 rounded-xl border border-neutral-800 font-mono text-xs text-neutral-300">
+            <p class="text-emerald-400 font-bold">$ npx spanner-fit --rows 40M --regions 1 --qps 1500</p>
+            <p class="text-red-400 mt-1">❌ SPANNER NOT RECOMMENDED — YET</p>
+            <p class="text-neutral-400">At 48GB and 1,500 QPS, Cloud SQL handles this easily and supports full PostGIS/pgvector extensions.</p>
+          </div>
+        </div>
+
+        <!-- METHOD 5: Migration Honesty & Lock-In -->
+        <div class="p-5 rounded-2xl bg-neutral-900 border border-neutral-800">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-white uppercase tracking-wider">🚪 METHOD 5: Migration Honesty (Exit Paths)</span>
             <span class="text-[10px] bg-amber-900/40 text-amber-300 px-2 py-0.5 rounded font-mono">Zero Gaslighting</span>
-          </h3>
-          <p class="text-xs text-neutral-300 leading-relaxed mb-3">
-            Getting in is easy; getting out depends on what features you use. 
-            If you stay on the Postgres dialect, tables and schemas export 1:1 via Avro or standard CSV into Postgres. 
-            <strong>The real lock-in:</strong> If your application architecture relies on synchronous multi-region writes across 3 continents, no single-node database can replace it. Price that into your architectural decision.
+          </div>
+          <p class="text-xs text-neutral-300 leading-relaxed">
+            <strong>The lock-in, stated plainly:</strong> If your application depends on strongly consistent writes across 3 continents, no single-node Postgres database can replace it without a full distributed re-architecture. If you use Spanner as a managed zero-ops relational store, your exit is an Avro export and a weekend migration.
           </p>
         </div>
+
       </div>
     </section>
 
   </main>
 
-  <!-- Footer Banner Explaining What Is Being Demonstrated -->
-  <footer class="bg-neutral-900 border-t border-neutral-800 px-4 py-3 text-xs text-neutral-400 flex flex-wrap items-center justify-between gap-2">
+  <!-- Footer Banner Explicitly Listing All 5 Methods -->
+  <footer class="bg-neutral-900 border-t border-neutral-800 px-4 py-3 text-xs text-neutral-400 flex flex-wrap items-center justify-between gap-3">
     <div class="flex items-center gap-2">
-      <span class="font-bold text-white">Interactive Demo:</span>
-      <span>Toggles between current B2B enterprise copy vs. high-converting developer-first marketing.</span>
+      <span class="font-bold text-white">Methodology:</span>
+      <span>4 Core Developer Marketing Methods (+ Method 5 Migration Honesty)</span>
     </div>
-    <div class="flex items-center gap-3">
-      <span class="text-emerald-400">✔ Method 1: Anti-Pitch</span>
-      <span class="text-emerald-400">✔ Method 2: Receipts</span>
-      <span class="text-emerald-400">✔ Method 3: Concurrency vs Lambda</span>
-      <span class="text-emerald-400">✔ Method 5: Exit Honesty</span>
+    <div class="flex flex-wrap items-center gap-3 font-mono text-[11px]">
+      <span class="text-emerald-400">✔ 1. Flaw-First Anti-Pitch</span>
+      <span class="text-emerald-400">✔ 2. Zero-Fluff Receipts</span>
+      <span class="text-emerald-400">✔ 3. Dual-Audience AEO (llms.txt)</span>
+      <span class="text-amber-400 font-bold">✔ 4. Engineering-as-Marketing (CLI Tools)</span>
+      <span class="text-blue-400">✔ 5. Migration Honesty</span>
     </div>
   </footer>
 
@@ -406,7 +495,6 @@
       const num = parseInt(reqs, 10);
       document.getElementById('calc-reqs-label').innerText = `${num.toLocaleString()} / day`;
       
-      // Free tier: 2M requests, 180,000 vCPU-seconds
       const monthlyReqs = num * 30;
       const avgLatencySec = 0.08; // 80ms
       const vcpuSec = monthlyReqs * avgLatencySec;
